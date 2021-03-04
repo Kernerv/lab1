@@ -20,8 +20,6 @@ public class num6
         double D=a1*b2-a2*b1;
         double D1=c1*b2-c2*b1;
         double D2=a1*c2-a2*c1;
-        double x=D1/D;
-        double y=D2/D;
         if (D==0 && D1==0 && D2==0)
         {
             System.out.print("The system of linear equations has an infinite set of solutions");
@@ -32,6 +30,9 @@ public class num6
         }
         if (D!=0)
         {
+        double x=D1/D;
+        double y=D2/D;
+
             System.out.println(x);
             System.out.println(y);
         }
