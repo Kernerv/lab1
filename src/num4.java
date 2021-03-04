@@ -5,6 +5,9 @@ public class num4 {
         Scanner in = new Scanner(System.in);
         System.out.print("Input first coefficient of the quadratic equation(a):");
         double a = in.nextDouble();
+        if (a == 0) {
+            throw new IllegalArgumentException("In a quadratic equation, a square cannot have a coefficient of 0");
+        }
         System.out.print("Input second coefficient of the quadratic equation(b):");
         double b = in.nextDouble();
         System.out.print("Input third coefficient of the quadratic equation(c):");
