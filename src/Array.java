@@ -52,16 +52,14 @@ public class Array {
 
 
     public static boolean num13(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < 0) {
-                System.out.println("Not all elements are positive");
-                return false;
-            } else {
-                System.out.println("All elements are positive");
-                return true;
+        boolean check = true;
+        for (int j : array) {
+            if (j <= 0) {
+                check = false;
+                break;
             }
         }
-        return false;
+        return check;
     }
 
     public static void num14(int[] array) {
@@ -77,7 +75,7 @@ public class Array {
         num8(array);
     }
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Input size: ");
         int k = in.nextInt();
@@ -87,7 +85,11 @@ public class Array {
         System.out.println(num10(array));
         System.out.println(num11(array));
         System.out.println(num12(array));
-        num13(array);
+        if (num13(array)) {
+            System.out.println("All numbers are positive");
+        } else {
+            System.out.println("Not all numbers are positive");
+        }
         num14(array);
     }
 }
